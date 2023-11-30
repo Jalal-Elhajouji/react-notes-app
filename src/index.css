@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+body{
+    font-family: 'Inter', sans-serif;
+}
+.note{
+    background-color: #F0F5FE;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 250px;
+    min-width: 250px;
+    border: 1.5px solid #BED6FD;
+    display: flex;
+    flex-direction: column;
+    color: rgb(24, 40, 61);
+    justify-content: space-between;
+}
+
+.note-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notes-list {
+     display: grid;
+     grid-gap: 10px;
+     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.container{
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto ;
+}
+.delete-icon{
+    color: rgb(170, 19, 49);
+}
+
+.note.add{
+    background-color: #e8e5e5a7;
+    border: 1.5px solid #c9bbac;
+    color: #794f20;
+}
+
+textarea{
+    border: none;
+    background-color: transparent;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-family: inherit;
+    color: inherit;
+    outline: none;
+}
+
+.save{
+    background-color: #835826d0;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: #e8e5e5;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.save:hover{
+    background-color: #835826;
+}
