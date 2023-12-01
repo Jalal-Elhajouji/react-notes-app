@@ -8,7 +8,10 @@ const AddNote = ({ handleAddNotes }) => {
     };
 
     const handleSave = () => {
-        handleAddNotes(noteText);
+        if (noteText.trim().length > 0) {
+            handleAddNotes(noteText);
+            setNoteText('');
+        }
     };
     return (
         <div className="note add">
