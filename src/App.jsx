@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import NotesList from './assets/NotesList';
-import {nanoid} from 'nanoid';
+import { nanoid } from 'nanoid';
 
 
 function App() {
@@ -16,11 +16,20 @@ function App() {
     const newNotes = [...notes, newNote];
     setNotes(newNotes);
   };
-  
+//  
+  const deleteNote = (id) => {
+      const newNotes = notes.filter((note)=>note.id !== id);
+      setNotes(newNotes);
+  }
+
   return (
-    <> 
+    <>
       <div className="container">
-        <NotesList notes={notes} handleAddNotes={addNote}/>
+        <NotesList 
+        notes={notes} 
+        handleAddNotes={addNote} 
+        handleDeleteNotes={deleteNote}
+        />
       </div>
     </>
   )
