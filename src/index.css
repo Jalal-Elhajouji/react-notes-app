@@ -17,6 +17,7 @@ body{
     color: rgb(24, 40, 61);
     justify-content: space-between;
     white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .note-footer{
