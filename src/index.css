@@ -111,6 +111,7 @@ textarea{
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    vertical-align: middle;
 }
 
 .modeSwitch{ 
@@ -121,3 +122,4 @@ textarea{
     color: #794f20;
     font-size: 1.6rem;
 }
+
