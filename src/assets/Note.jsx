@@ -14,4 +14,4 @@ const Note = ({ id, text, date, handleDeleteNotes }) => {
     )
 }
 
-export default Note; 
+export default Note;  
