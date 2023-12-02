@@ -4,7 +4,6 @@ import NotesList from './assets/NotesList';
 import Search from './assets/Search';
 import Header from './assets/Header';
 
-
 function App() {
 
   const [notes, setNotes] = useState([]);
@@ -20,8 +19,10 @@ function App() {
   };
 
   const deleteNote = (id) => {
-    const newNotes = notes.filter((note) => note.id !== id);
-    setNotes(newNotes);
+    if (window.confirm('Are you sure you want to delete this note?')) {
+      const newNotes = notes.filter((note) => note.id !== id);
+      setNotes(newNotes);
+    }
   }
 
   const [searchText, setSearchText] = useState('');
