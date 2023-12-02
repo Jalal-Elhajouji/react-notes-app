@@ -4,17 +4,18 @@
 body{
     font-family: 'Inter', sans-serif;
     margin: 0;
+    background-color: #ECE8E2;
 }
 
 /*///////////////////// Note style */
 
 .note{
-    background-color: #F0F5FE;
+    background-color: #66c2b347;
     margin: 10px;
     padding: 10px;
     min-height: 250px;
     min-width: 250px;
-    border: 1.5px solid #BED6FD;
+    border: 1.5px solid #56b3abdd;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -34,8 +35,8 @@ body{
      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .note.add{
-    background-color: #e8e5e5a7;
-    border: 1.5px solid #c9bbac;
+    background-color: #69492159;
+    border: 1.5px solid #9f8a73;
     color: #794f20;
 }
 textarea{
@@ -82,7 +83,7 @@ textarea{
 
 /*///////////////////// Search */
 .search{
-    background-color: #e9e9e9;
+    background-color: #ECE8E2;
     display: flex;
     margin: 10px;
     padding: 10px;
@@ -139,14 +140,14 @@ textarea{
 }
 
 .dark-mode .note{
-    background-color: #1d2023;
-    border: 1.5px solid #647897;
+    background-color: #283f43bd;
+    border: 1.5px solid #64789785;
     color: #e8e5e5;
 }
 
 .dark-mode .note.add{
-    background-color: #4d4d4d;
-    border: 1.5px solid #c9bbac;
+    background-color: #513d2982;
+    border: 1.5px solid #c9bbac82;
     color: #e8e5e5;
 }
 
