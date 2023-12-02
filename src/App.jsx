@@ -26,20 +26,24 @@ function App() {
   }
 
   const [searchText, setSearchText] = useState('');
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <>
-      <Header />
-      <div className="container">
-        <Search handleSearchNote={setSearchText} />
-        <NotesList
-          notes={notes.filter((note) =>
-            note.text.toLowerCase().includes(searchText.toLowerCase())
-          )}
 
-          handleAddNotes={addNote}
-          handleDeleteNotes={deleteNote}
-        />
+    <>
+      <div className={`${darkMode && 'dark-mode'}`}>
+        <Header handleDarkMode={setDarkMode} />
+        <div className="container">
+          <Search handleSearchNote={setSearchText} />
+          <NotesList
+            notes={notes.filter((note) =>
+              note.text.toLowerCase().includes(searchText.toLowerCase())
+            )}
+
+            handleAddNotes={addNote}
+            handleDeleteNotes={deleteNote}
+          />
+        </div>
       </div>
     </>
   )

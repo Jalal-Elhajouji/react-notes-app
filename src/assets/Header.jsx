@@ -1,11 +1,19 @@
 import '../index.css';
 
-const Header = () => {
+const Header = ({ handleDarkMode }) => {
     return (
         <div className='container'>
             <header className='header'>
                 <h2 className='heading'>My Notes</h2>
-                <button className='modeSwitch'>Switch Mode</button>
+                <button
+                    className='modeSwitch'
+                    onClick={() =>
+                        handleDarkMode(
+                            (previousDarkMode) => !previousDarkMode
+                        )
+                    }>
+                    Switch Mode
+                </button>
             </header>
         </div>
     );

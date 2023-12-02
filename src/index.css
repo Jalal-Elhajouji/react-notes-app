@@ -3,15 +3,19 @@
 
 body{
     font-family: 'Inter', sans-serif;
+    margin: 0;
 }
+
+/*///////////////////// Note style */
+
 .note{
     background-color: #F0F5FE;
     margin: 10px;
     padding: 10px;
-    border-radius: 10px;
     min-height: 250px;
     min-width: 250px;
     border: 1.5px solid #BED6FD;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     color: rgb(24, 40, 61);
@@ -19,35 +23,21 @@ body{
     white-space: pre-wrap;
     word-wrap: break-word;
 }
-
 .note-footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 .notes-list {
      display: grid;
      grid-gap: 10px;
      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
-
-.container{
-    max-width: 1500px;
-    margin-right: auto;
-    margin-left: auto ;
-}
-.delete-icon{
-    color: rgb(170, 19, 49);
-    cursor: pointer;
-}
-
 .note.add{
     background-color: #e8e5e5a7;
     border: 1.5px solid #c9bbac;
     color: #794f20;
 }
-
 textarea{
     border: none;
     background-color: transparent;
@@ -59,22 +49,38 @@ textarea{
     color: inherit;
     outline: none;
 }
+/*/////////////////////////////////////////////////////////////////*/
 
+.container{
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto ;
+}
+
+
+.delete-icon{
+    color: rgb(170, 19, 49);
+    cursor: pointer;
+}
+
+/* Buttons ///////////////////////////////////////////////////////*/
 .save , .modeSwitch{
     background-color: #835826d0;
     border: none;
     border-radius: 25px;
     padding: 5px 10px;
-    color: #e8e5e5;
+    color: #d8d3ced0;
     font-size: medium;
     font-weight: 550;
     cursor: pointer;
 }
-
 .save:hover , .modeSwitch:hover{
     background-color: #835826;
 }
 
+/*///////////////////////////////////////////////////////////////*/
+
+/*///////////////////// Search */
 .search{
     background-color: #e9e9e9;
     display: flex;
@@ -85,7 +91,6 @@ textarea{
     border: solid 1.5px #c9bbac;
     border-radius: 25px;
 }
-
 .search input{
     margin-left: 10px;
     border: none;
@@ -96,17 +101,16 @@ textarea{
     width: 100%;
     height: 100%;    
 }
-
 .searchIcon {
     cursor: pointer;
     color: #794f20;
     font-size: 25px;
     margin-right: 5px;
 }
-
 .search input:focus {
     outline: none;
 }
+/*////////////////////////////////////////////////*/
 
 .header{
     display: flex;
@@ -124,3 +128,29 @@ textarea{
     font-size: 1.6rem;
 }
 
+
+/*///////////////////// Dark Mode */
+
+.dark-mode{
+    background-color: #2e2e2e;
+    color: #e8e5e5;
+    margin: 0;
+    height: 100vh;
+}
+
+.dark-mode .note{
+    background-color: #1d2023;
+    border: 1.5px solid #647897;
+    color: #e8e5e5;
+}
+
+.dark-mode .note.add{
+    background-color: #4d4d4d;
+    border: 1.5px solid #c9bbac;
+    color: #e8e5e5;
+}
+
+.dark-mode .search{
+    background-color: #2e2e2e;
+    border: solid 1.5px #c9bbac;
+}
