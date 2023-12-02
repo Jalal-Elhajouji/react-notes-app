@@ -59,10 +59,10 @@ textarea{
     outline: none;
 }
 
-.save{
+.save , .modeSwitch{
     background-color: #835826d0;
     border: none;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 5px 10px;
     color: #e8e5e5;
     font-size: medium;
@@ -70,7 +70,7 @@ textarea{
     cursor: pointer;
 }
 
-.save:hover{
+.save:hover , .modeSwitch:hover{
     background-color: #835826;
 }
 
@@ -107,3 +107,17 @@ textarea{
     outline: none;
 }
 
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.modeSwitch{ 
+    height: 50px;
+}
+
+.heading{
+    color: #794f20;
+    font-size: 1.6rem;
+}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { nanoid } from 'nanoid';
 import NotesList from './assets/NotesList';
 import Search from './assets/Search';
+import Header from './assets/Header';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <div className="container">
         <Search handleSearchNote={setSearchText} />
         <NotesList
