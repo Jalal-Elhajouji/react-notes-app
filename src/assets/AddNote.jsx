@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 
 const AddNote = ({ handleAddNotes }) => {
     const [noteText, setNoteText] = useState('');
-    const limit = 200
+    const limit = 250
 
     const handleChange = (event) => {
         if (limit - event.target.value.length >= 0){
@@ -16,6 +16,7 @@ const AddNote = ({ handleAddNotes }) => {
             setNoteText('');
         }
     };
+
     return (
         <div className="note add">
             <textarea

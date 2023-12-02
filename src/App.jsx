@@ -6,7 +6,6 @@ import Search from './assets/Search';
 
 function App() {
 
-
   const [notes, setNotes] = useState([]);
   const addNote = (text) => {
     const date = new Date();
@@ -18,21 +17,25 @@ function App() {
     const newNotes = [...notes, newNote];
     setNotes(newNotes);
   };
+
   const deleteNote = (id) => {
-      const newNotes = notes.filter((note)=>note.id !== id);
-      setNotes(newNotes);
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
   }
 
-
+  const [searchText, setSearchText] = useState('');
 
   return (
     <>
       <div className="container">
-        <Search />
-        <NotesList 
-        notes={notes} 
-        handleAddNotes={addNote} 
-        handleDeleteNotes={deleteNote}
+        <Search handleSearchNote={setSearchText} />
+        <NotesList
+          notes={notes.filter((note) =>
+            note.text.toLowerCase().includes(searchText.toLowerCase())
+          )}
+
+          handleAddNotes={addNote}
+          handleDeleteNotes={deleteNote}
         />
       </div>
     </>
