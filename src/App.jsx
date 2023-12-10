@@ -7,6 +7,9 @@ import Header from './assets/Header';
 function App() {
 
   const [notes, setNotes] = useState([]);
+  const [searchText, setSearchText] = useState('');
+  const [darkMode, setDarkMode] = useState(false);
+
   const addNote = (text) => {
     const date = new Date();
     const newNote = {
@@ -25,11 +28,7 @@ function App() {
     }
   }
 
-  const [searchText, setSearchText] = useState('');
-  const [darkMode, setDarkMode] = useState(false);
-
   return (
-
     <>
       <div className={`${darkMode && 'dark-mode'}`}>
         <Header handleDarkMode={setDarkMode} />

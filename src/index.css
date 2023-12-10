@@ -36,7 +36,7 @@ body{
 }
 .note.add{
     background-color: #69492159;
-    border: 1.5px solid #9f8a73;
+    border: 1.5px solid #937a60;
     color: #794f20;
 }
 textarea{
@@ -89,7 +89,7 @@ textarea{
     padding: 10px;
     height: 25px;
     gap: 5px;
-    border: solid 1.5px #c9bbac;
+    border: solid 1.8px #a18b73;
     border-radius: 25px;
 }
 .search input{
@@ -125,7 +125,7 @@ textarea{
 }
 
 .heading{
-    color: #794f20;
+    color: #956125;
     font-size: 1.6rem;
 }
 
@@ -136,7 +136,7 @@ textarea{
     background-color: #2e2e2e;
     color: #e8e5e5;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .dark-mode .note{
@@ -155,3 +155,4 @@ textarea{
     background-color: #2e2e2e;
     border: solid 1.5px #c9bbac;
 }
+
